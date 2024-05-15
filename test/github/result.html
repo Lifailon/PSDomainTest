@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+            <style>
+                header {
+                    background-color: #4051B5;
+                    color: white;
+                    text-align: center;
+                    padding: 20px 0;
+                    position: fixed;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+                    z-index: 1000;
+                }
+                header a {
+                    color: white;
+                    text-decoration: none;
+                    font-size: 26px;
+                }
+                body {
+                    margin: 0;
+                    padding-top: 50px;
+                    padding-left: 150px;
+                    padding-right: 150px;
+                }
+                h1 {
+                    color: #4051B5;
+                }
+                h2 {
+                    color: #4051B5;
+                }
+                h3 {
+                    color: #4051B5;
+                }
+                table {
+                    border-collapse: collapse;
+                    width: 100%;
+                    margin: auto;
+                    font-size: 14px;
+                }
+                th, td {
+                    border: 1px solid black;
+                    padding: 8px;
+                    text-align: left;
+                    cursor: pointer;
+                }
+                th {
+                    background-color: #6495ED;
+                    color: white;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+                th:hover {
+                    background-color: #4051B5;
+                }
+                .ascending::after {
+                    content: " ▲";
+                }
+                .descending::after {
+                    content: " ▼";
+                }
+                .custom-heading .heading {
+                    color: #6495ED;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+                .custom-heading .text {
+                    color: #000;
+                    font-size: 20px;
+                }
+            </style>
+        
+</head><body>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var tableLinks = document.querySelectorAll("table a");
+                    tableLinks.forEach(function(link) {
+                        link.setAttribute("target", "_blank");
+                    });
+                });
+                document.addEventListener("DOMContentLoaded", function() {
+                    var tables = document.querySelectorAll("table");
+                    tables.forEach(function(table) {
+                        makeTableSortable(table);
+                    });
+                });
+                function makeTableSortable(table) {
+                    var headers = table.querySelectorAll("th");
+                    headers.forEach(function(header, index) {
+                        header.addEventListener("click", function() {
+                            sortTable(table, index);
+                        });
+                    });
+                }
+                function sortTable(table, columnIndex) {
+                    var rows = Array.from(table.rows).slice(1);
+                    var ascending = !table.rows[0].cells[columnIndex].classList.contains("ascending");
+                    rows.sort(function(rowA, rowB) {
+                        var cellA = rowA.cells[columnIndex].textContent.trim();
+                        var cellB = rowB.cells[columnIndex].textContent.trim();
+                        return ascending ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
+                    });
+                    rows.forEach(function(row) {
+                        table.appendChild(row);
+                    });
+                    updateHeaderClasses(table, columnIndex, ascending);
+                }
+                function updateHeaderClasses(table, columnIndex, ascending) {
+                    var headers = table.querySelectorAll("th");
+                    headers.forEach(function(header, index) {
+                        if (index === columnIndex) {
+                            if (ascending) {
+                                header.classList.add("ascending");
+                                header.classList.remove("descending");
+                            } else {
+                                header.classList.add("descending");
+                                header.classList.remove("ascending");
+                            }
+                        } else {
+                            header.classList.remove("ascending");
+                            header.classList.remove("descending");
+                        }
+                    });
+                }
+            </script>
+        
+
+            <div class='custom-heading'>
+                <span class='heading'>Domain:</span> <span class='text'>github.com</span>
+                <br>
+                <br>
+                <span class='heading'>Date:</span> <span class='text'>07:53 15.05.2024</span>
+                <br>
+                <br>
+                <br>
+            </div>
+        <table>
+<colgroup><col/><col/><col/><col/><col/></colgroup>
+<tr><th>Module</th><th>Test</th><th>Descriptions</th><th>Level</th><th>Result</th></tr>
+<tr><td>System</td><td>Unspecified</td><td>Unspecified</td><td>INFO</td><td>Using version v5.0.0 of the Zonemaster engine.
+</td></tr>
+<tr><td>Basic</td><td>Basic01</td><td>The domain must have a parent domain</td><td>INFO</td><td>The parent zone is &quot;com&quot; as returned from name servers &quot;a.gtld-servers.net/192.5.6.30; a.gtld-servers.net/2001:503:a83e::2:30; b.gtld-servers.net/192.33.14.30; b.gtld-servers.net/2001:503:231d::2:30; c.gtld-servers.net/192.26.92.30; c.gtld-servers.net/2001:503:83eb::30; d.gtld-servers.net/192.31.80.30; d.gtld-servers.net/2001:500:856e::30; e.gtld-servers.net/192.12.94.30; e.gtld-servers.net/2001:502:1ca1::30; f.gtld-servers.net/192.35.51.30; f.gtld-servers.net/2001:503:d414::30; g.gtld-servers.net/192.42.93.30; g.gtld-servers.net/2001:503:eea3::30; h.gtld-servers.net/192.54.112.30; h.gtld-servers.net/2001:502:8cc::30; i.gtld-servers.net/192.43.172.30; i.gtld-servers.net/2001:503:39c1::30; j.gtld-servers.net/192.48.79.30; j.gtld-servers.net/2001:502:7094::30; k.gtld-servers.net/192.52.178.30; k.gtld-servers.net/2001:503:d2d::30; l.gtld-servers.net/192.41.162.30; l.gtld-servers.net/2001:500:d937::30; m.gtld-servers.net/192.55.83.30; m.gtld-servers.net/2001:501:b1f9::30&quot;.
+</td></tr>
+<tr><td>Basic</td><td>Basic01</td><td>The domain must have a parent domain</td><td>INFO</td><td>The zone &quot;github.com&quot; is found.
+</td></tr>
+<tr><td>Basic</td><td>Basic02</td><td>The domain must have at least one working name server</td><td>INFO</td><td>Authoritative answer on SOA query for &quot;github.com&quot; is returned by name servers &quot;dns1.p08.nsone.net/198.51.44.8; dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; dns2.p08.nsone.net/198.51.45.8; dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns3.p08.nsone.net/198.51.44.72; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3; dns4.p08.nsone.net/198.51.45.72; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4; ns-1283.awsdns-32.org/205.251.197.3; ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/205.251.193.165; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/205.251.194.8; ns-520.awsdns-01.net/2600:9000:5302:800::1&quot;.
+</td></tr>
+<tr><td>Basic</td><td>Unspecified</td><td>Unspecified</td><td>INFO</td><td>Functional nameserver found. &quot;A&quot; query for www.github.com test skipped.
+</td></tr>
+<tr><td>Address</td><td>Address01</td><td>Name server address must be globally routable</td><td>INFO</td><td>All Nameserver addresses are in the routable public addressing space.
+</td></tr>
+<tr><td>Address</td><td>Address02</td><td>Reverse DNS entry exists for name server IP address</td><td>INFO</td><td>Reverse DNS entry exists for each Nameserver IP address.
+</td></tr>
+<tr><td>Address</td><td>Address03</td><td>Reverse DNS entry matches name server name</td><td>INFO</td><td>Every reverse DNS entry matches name server name.
+</td></tr>
+<tr><td>Connectivity</td><td>Connectivity03</td><td>AS Diversity</td><td>INFO</td><td>At least two IPv4 addresses of the authoritative nameservers are announced by different AS sets. A merged list of all AS: (16509, 62597).
+</td></tr>
+<tr><td>Connectivity</td><td>Connectivity03</td><td>AS Diversity</td><td>INFO</td><td>At least two IPv6 addresses of the authoritative nameservers are announced by different AS sets. A merged list of all AS: (16509, 62597).
+</td></tr>
+<tr><td>Connectivity</td><td>Connectivity04</td><td>IP Prefix Diversity</td><td>WARNING</td><td>The following name server(s) are announced in the same IPv4 prefix (198.51.45.0/24): &quot;dns2.p08.nsone.net/198.51.45.8; dns4.p08.nsone.net/198.51.45.72&quot;
+</td></tr>
+<tr><td>Connectivity</td><td>Connectivity04</td><td>IP Prefix Diversity</td><td>WARNING</td><td>The following name server(s) are announced in the same IPv4 prefix (198.51.44.0/24): &quot;dns1.p08.nsone.net/198.51.44.8; dns3.p08.nsone.net/198.51.44.72&quot;
+</td></tr>
+<tr><td>Connectivity</td><td>Connectivity04</td><td>IP Prefix Diversity</td><td>INFO</td><td>The following name server(s) are announced in unique IPv4 prefix(es): &quot;ns-1283.awsdns-32.org/205.251.197.3; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-421.awsdns-52.com/205.251.193.165; ns-520.awsdns-01.net/205.251.194.8&quot;
+</td></tr>
+<tr><td>Connectivity</td><td>Connectivity04</td><td>IP Prefix Diversity</td><td>WARNING</td><td>The following name server(s) are announced in the same IPv6 prefix (2620:4d:4000::/48): &quot;dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3&quot;
+</td></tr>
+<tr><td>Connectivity</td><td>Connectivity04</td><td>IP Prefix Diversity</td><td>WARNING</td><td>The following name server(s) are announced in the same IPv6 prefix (2a00:edc0:6259::/48): &quot;dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4&quot;
+</td></tr>
+<tr><td>Connectivity</td><td>Connectivity04</td><td>IP Prefix Diversity</td><td>INFO</td><td>The following name server(s) are announced in unique IPv6 prefix(es): &quot;ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/2600:9000:5302:800::1&quot;
+</td></tr>
+<tr><td>Consistency</td><td>Consistency01</td><td>SOA serial number consistency</td><td>INFO</td><td>Saw SOA serial number 1 on following nameserver set : ns-1283.awsdns-32.org/205.251.197.3; ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/205.251.193.165; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/205.251.194.8; ns-520.awsdns-01.net/2600:9000:5302:800::1.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver01</td><td>A name server should not be a recursor</td><td>INFO</td><td>Nameserver dns2.p08.nsone.net/2a00:edc0:6259:7:8::2 is not a recursor.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver01</td><td>A name server should not be a recursor</td><td>INFO</td><td>Nameserver dns3.p08.nsone.net/198.51.44.72 is not a recursor.
+</td></tr>
+<tr><td>Consistency</td><td>Consistency01</td><td>SOA serial number consistency</td><td>INFO</td><td>Saw SOA serial number 1656468023 on following nameserver set : dns1.p08.nsone.net/198.51.44.8; dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; dns2.p08.nsone.net/198.51.45.8; dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns3.p08.nsone.net/198.51.44.72; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3; dns4.p08.nsone.net/198.51.45.72; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4.
+</td></tr>
+<tr><td>Consistency</td><td>Consistency01</td><td>SOA serial number consistency</td><td>WARNING</td><td>Found 2 SOA serial number(s).
+</td></tr>
+<tr><td>Consistency</td><td>Consistency01</td><td>SOA serial number consistency</td><td>NOTICE</td><td>Difference between the smaller serial (1) and the bigger one (1656468023) is greater than the maximum allowed (0).
+</td></tr>
+<tr><td>Consistency</td><td>Consistency02</td><td>SOA RNAME consistency</td><td>NOTICE</td><td>Found 2 SOA rname(s).
+</td></tr>
+<tr><td>Consistency</td><td>Consistency02</td><td>SOA RNAME consistency</td><td>INFO</td><td>Found SOA rname awsdns-hostmaster.amazon.com. on following nameserver set : ns-1283.awsdns-32.org/205.251.197.3; ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/205.251.193.165; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/205.251.194.8; ns-520.awsdns-01.net/2600:9000:5302:800::1.
+</td></tr>
+<tr><td>Consistency</td><td>Consistency02</td><td>SOA RNAME consistency</td><td>INFO</td><td>Found SOA rname hostmaster.nsone.net. on following nameserver set : dns1.p08.nsone.net/198.51.44.8; dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; dns2.p08.nsone.net/198.51.45.8; dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns3.p08.nsone.net/198.51.44.72; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3; dns4.p08.nsone.net/198.51.45.72; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4.
+</td></tr>
+<tr><td>Consistency</td><td>Consistency03</td><td>SOA timers consistency</td><td>NOTICE</td><td>Found 2 SOA time parameter set(s).
+</td></tr>
+<tr><td>Consistency</td><td>Consistency03</td><td>SOA timers consistency</td><td>INFO</td><td>Saw SOA time parameter set (REFRESH=43200,  RETRY=7200,  EXPIRE=1209600,  MINIMUM=3600) on following nameserver set : dns1.p08.nsone.net/198.51.44.8; dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; dns2.p08.nsone.net/198.51.45.8; dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns3.p08.nsone.net/198.51.44.72; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3; dns4.p08.nsone.net/198.51.45.72; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4.
+</td></tr>
+<tr><td>Consistency</td><td>Consistency03</td><td>SOA timers consistency</td><td>INFO</td><td>Saw SOA time parameter set (REFRESH=7200,  RETRY=900,  EXPIRE=1209600,  MINIMUM=86400) on following nameserver set : ns-1283.awsdns-32.org/205.251.197.3; ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/205.251.193.165; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/205.251.194.8; ns-520.awsdns-01.net/2600:9000:5302:800::1.
+</td></tr>
+<tr><td>Consistency</td><td>Consistency04</td><td>Name server NS consistency</td><td>INFO</td><td>A single NS set was found (dns1.p08.nsone.net.; dns2.p08.nsone.net.; dns3.p08.nsone.net.; dns4.p08.nsone.net.; ns-1283.awsdns-32.org.; ns-1707.awsdns-21.co.uk.; ns-421.awsdns-52.com.; ns-520.awsdns-01.net.).
+</td></tr>
+<tr><td>Consistency</td><td>Consistency05</td><td>Consistency between glue and authoritative data</td><td>INFO</td><td>Glue records are consistent between glue and authoritative data.
+</td></tr>
+<tr><td>Consistency</td><td>Consistency06</td><td>SOA MNAME consistency</td><td>NOTICE</td><td>Saw 2 SOA mname.
+</td></tr>
+<tr><td>Delegation</td><td>Delegation01</td><td>Minimum number of name servers</td><td>INFO</td><td>Delegation lists enough (8) nameservers. Lower limit set to 2. Name servers: dns1.p08.nsone.net; dns2.p08.nsone.net; dns3.p08.nsone.net; dns4.p08.nsone.net; ns-1283.awsdns-32.org; ns-1707.awsdns-21.co.uk; ns-421.awsdns-52.com; ns-520.awsdns-01.net
+</td></tr>
+<tr><td>Delegation</td><td>Delegation01</td><td>Minimum number of name servers</td><td>INFO</td><td>Child lists enough (8) nameservers. Lower limit set to 2. Name servers: dns1.p08.nsone.net; dns2.p08.nsone.net; dns3.p08.nsone.net; dns4.p08.nsone.net; ns-1283.awsdns-32.org; ns-1707.awsdns-21.co.uk; ns-421.awsdns-52.com; ns-520.awsdns-01.net
+</td></tr>
+<tr><td>Delegation</td><td>Delegation01</td><td>Minimum number of name servers</td><td>INFO</td><td>Child lists enough (8) nameservers that resolve to IPv4 addresses. Lower limit set to 2. Name servers: dns1.p08.nsone.net/198.51.44.8; dns2.p08.nsone.net/198.51.45.8; dns3.p08.nsone.net/198.51.44.72; dns4.p08.nsone.net/198.51.45.72; ns-1283.awsdns-32.org/205.251.197.3; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-421.awsdns-52.com/205.251.193.165; ns-520.awsdns-01.net/205.251.194.8
+</td></tr>
+<tr><td>Delegation</td><td>Delegation01</td><td>Minimum number of name servers</td><td>INFO</td><td>Child lists enough (8) nameservers that resolve to IPv6 addresses. Lower limit set to 2. Name servers: dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4; ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/2600:9000:5302:800::1
+</td></tr>
+<tr><td>Delegation</td><td>Delegation01</td><td>Minimum number of name servers</td><td>INFO</td><td>Delegation lists enough (8) nameservers that resolve to IPv4 addresses. Lower limit set to 2. Name servers: dns1.p08.nsone.net/198.51.44.8; dns2.p08.nsone.net/198.51.45.8; dns3.p08.nsone.net/198.51.44.72; dns4.p08.nsone.net/198.51.45.72; ns-1283.awsdns-32.org/205.251.197.3; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-421.awsdns-52.com/205.251.193.165; ns-520.awsdns-01.net/205.251.194.8
+</td></tr>
+<tr><td>Delegation</td><td>Delegation01</td><td>Minimum number of name servers</td><td>INFO</td><td>Delegation lists enough (8) nameservers that resolve to IPv6 addresses. Lower limit set to 2. Name servers: dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4; ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/2600:9000:5302:800::1
+</td></tr>
+<tr><td>Delegation</td><td>Delegation02</td><td>Name servers must have distinct IP addresses</td><td>INFO</td><td>All the IP addresses used by the nameservers in parent are unique.
+</td></tr>
+<tr><td>Delegation</td><td>Delegation02</td><td>Name servers must have distinct IP addresses</td><td>INFO</td><td>All the IP addresses used by the nameservers in child are unique.
+</td></tr>
+<tr><td>Delegation</td><td>Delegation02</td><td>Name servers must have distinct IP addresses</td><td>INFO</td><td>All the IP addresses used by the nameservers are unique.
+</td></tr>
+<tr><td>Delegation</td><td>Delegation03</td><td>No truncation of referrals</td><td>INFO</td><td>The smallest possible legal referral packet is smaller than 513 octets (it is 494).
+</td></tr>
+<tr><td>Delegation</td><td>Delegation04</td><td>Name server is authoritative</td><td>INFO</td><td>All these nameservers are confirmed to be authoritative : dns1.p08.nsone.net; dns2.p08.nsone.net; dns3.p08.nsone.net; dns4.p08.nsone.net; ns-1283.awsdns-32.org; ns-1707.awsdns-21.co.uk; ns-421.awsdns-52.com; ns-520.awsdns-01.net.
+</td></tr>
+<tr><td>Delegation</td><td>Delegation05</td><td>Name server must not point at CNAME alias</td><td>INFO</td><td>No nameserver points to CNAME alias.
+</td></tr>
+<tr><td>Delegation</td><td>Delegation06</td><td>Existence of SOA</td><td>INFO</td><td>All the nameservers have SOA record.
+</td></tr>
+<tr><td>Delegation</td><td>Delegation07</td><td>Parent glue name records present in child</td><td>INFO</td><td>All of the nameserver names are listed both at parent and child.
+</td></tr>
+<tr><td>DNSSEC</td><td>DNSSEC07</td><td>If DNSKEY at child, parent should have DS</td><td>NOTICE</td><td>There are neither DS nor DNSKEY records for the zone.
+</td></tr>
+<tr><td>DNSSEC</td><td>Unspecified</td><td>Unspecified</td><td>NOTICE</td><td>The zone is not signed with DNSSEC.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver01</td><td>A name server should not be a recursor</td><td>INFO</td><td>Nameserver dns1.p08.nsone.net/198.51.44.8 is not a recursor.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver01</td><td>A name server should not be a recursor</td><td>INFO</td><td>Nameserver dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1 is not a recursor.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver01</td><td>A name server should not be a recursor</td><td>INFO</td><td>Nameserver dns2.p08.nsone.net/198.51.45.8 is not a recursor.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver01</td><td>A name server should not be a recursor</td><td>INFO</td><td>Nameserver dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3 is not a recursor.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver01</td><td>A name server should not be a recursor</td><td>INFO</td><td>Nameserver dns4.p08.nsone.net/198.51.45.72 is not a recursor.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver01</td><td>A name server should not be a recursor</td><td>INFO</td><td>Nameserver dns4.p08.nsone.net/2a00:edc0:6259:7:8::4 is not a recursor.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver01</td><td>A name server should not be a recursor</td><td>INFO</td><td>Nameserver ns-1283.awsdns-32.org/205.251.197.3 is not a recursor.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver01</td><td>A name server should not be a recursor</td><td>INFO</td><td>Nameserver ns-1283.awsdns-32.org/2600:9000:5305:300::1 is not a recursor.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver01</td><td>A name server should not be a recursor</td><td>INFO</td><td>Nameserver ns-1707.awsdns-21.co.uk/205.251.198.171 is not a recursor.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver01</td><td>A name server should not be a recursor</td><td>INFO</td><td>Nameserver ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1 is not a recursor.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver01</td><td>A name server should not be a recursor</td><td>INFO</td><td>Nameserver ns-421.awsdns-52.com/205.251.193.165 is not a recursor.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver01</td><td>A name server should not be a recursor</td><td>INFO</td><td>Nameserver ns-421.awsdns-52.com/2600:9000:5301:a500::1 is not a recursor.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver01</td><td>A name server should not be a recursor</td><td>INFO</td><td>Nameserver ns-520.awsdns-01.net/205.251.194.8 is not a recursor.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver01</td><td>A name server should not be a recursor</td><td>INFO</td><td>Nameserver ns-520.awsdns-01.net/2600:9000:5302:800::1 is not a recursor.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver02</td><td>Test of EDNS0 support</td><td>INFO</td><td>The following nameservers support EDNS0 : ns-520.awsdns-01.net/2600:9000:5302:800::1; dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; ns-520.awsdns-01.net/205.251.194.8; ns-421.awsdns-52.com/205.251.193.165; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; dns3.p08.nsone.net/198.51.44.72; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-1283.awsdns-32.org/2600:9000:5305:300::1; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4; ns-1707.awsdns-21.co.uk/205.251.198.171; dns4.p08.nsone.net/198.51.45.72; dns2.p08.nsone.net/198.51.45.8; ns-1283.awsdns-32.org/205.251.197.3; dns1.p08.nsone.net/198.51.44.8; dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver03</td><td>Test availability of zone transfer (AXFR)</td><td>INFO</td><td>AXFR not available on nameserver dns1.p08.nsone.net/198.51.44.8.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver03</td><td>Test availability of zone transfer (AXFR)</td><td>INFO</td><td>AXFR not available on nameserver dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver03</td><td>Test availability of zone transfer (AXFR)</td><td>INFO</td><td>AXFR not available on nameserver dns2.p08.nsone.net/198.51.45.8.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver03</td><td>Test availability of zone transfer (AXFR)</td><td>INFO</td><td>AXFR not available on nameserver dns2.p08.nsone.net/2a00:edc0:6259:7:8::2.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver03</td><td>Test availability of zone transfer (AXFR)</td><td>INFO</td><td>AXFR not available on nameserver dns3.p08.nsone.net/198.51.44.72.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver03</td><td>Test availability of zone transfer (AXFR)</td><td>INFO</td><td>AXFR not available on nameserver dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver03</td><td>Test availability of zone transfer (AXFR)</td><td>INFO</td><td>AXFR not available on nameserver dns4.p08.nsone.net/198.51.45.72.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver03</td><td>Test availability of zone transfer (AXFR)</td><td>INFO</td><td>AXFR not available on nameserver dns4.p08.nsone.net/2a00:edc0:6259:7:8::4.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver03</td><td>Test availability of zone transfer (AXFR)</td><td>INFO</td><td>AXFR not available on nameserver ns-1283.awsdns-32.org/205.251.197.3.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver03</td><td>Test availability of zone transfer (AXFR)</td><td>INFO</td><td>AXFR not available on nameserver ns-1283.awsdns-32.org/2600:9000:5305:300::1.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver03</td><td>Test availability of zone transfer (AXFR)</td><td>INFO</td><td>AXFR not available on nameserver ns-1707.awsdns-21.co.uk/205.251.198.171.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver03</td><td>Test availability of zone transfer (AXFR)</td><td>INFO</td><td>AXFR not available on nameserver ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver03</td><td>Test availability of zone transfer (AXFR)</td><td>INFO</td><td>AXFR not available on nameserver ns-421.awsdns-52.com/205.251.193.165.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver03</td><td>Test availability of zone transfer (AXFR)</td><td>INFO</td><td>AXFR not available on nameserver ns-421.awsdns-52.com/2600:9000:5301:a500::1.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver03</td><td>Test availability of zone transfer (AXFR)</td><td>INFO</td><td>AXFR not available on nameserver ns-520.awsdns-01.net/205.251.194.8.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver03</td><td>Test availability of zone transfer (AXFR)</td><td>INFO</td><td>AXFR not available on nameserver ns-520.awsdns-01.net/2600:9000:5302:800::1.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver04</td><td>Same source address</td><td>INFO</td><td>All nameservers reply with same IP used to query them.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver06</td><td>NS can be resolved</td><td>INFO</td><td>All nameservers succeeded to resolve to an IP address.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver07</td><td>To check whether authoritative name servers return an upward referral</td><td>INFO</td><td>None of the following nameservers returns an upward referral : dns1.p08.nsone.net; dns2.p08.nsone.net; dns3.p08.nsone.net; dns4.p08.nsone.net; ns-1283.awsdns-32.org; ns-1707.awsdns-21.co.uk; ns-421.awsdns-52.com; ns-520.awsdns-01.net.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver08</td><td>Testing QNAME case insensitivity</td><td>INFO</td><td>Nameserver dns1.p08.nsone.net/198.51.44.8 preserves original case of queried names (www.GIThUB.COM).
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver08</td><td>Testing QNAME case insensitivity</td><td>INFO</td><td>Nameserver dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1 preserves original case of queried names (www.GIThUB.COM).
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver08</td><td>Testing QNAME case insensitivity</td><td>INFO</td><td>Nameserver dns2.p08.nsone.net/198.51.45.8 preserves original case of queried names (www.GIThUB.COM).
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver08</td><td>Testing QNAME case insensitivity</td><td>INFO</td><td>Nameserver dns2.p08.nsone.net/2a00:edc0:6259:7:8::2 preserves original case of queried names (www.GIThUB.COM).
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver08</td><td>Testing QNAME case insensitivity</td><td>INFO</td><td>Nameserver dns3.p08.nsone.net/198.51.44.72 preserves original case of queried names (www.GIThUB.COM).
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver08</td><td>Testing QNAME case insensitivity</td><td>INFO</td><td>Nameserver dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3 preserves original case of queried names (www.GIThUB.COM).
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver08</td><td>Testing QNAME case insensitivity</td><td>INFO</td><td>Nameserver dns4.p08.nsone.net/198.51.45.72 preserves original case of queried names (www.GIThUB.COM).
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver08</td><td>Testing QNAME case insensitivity</td><td>INFO</td><td>Nameserver dns4.p08.nsone.net/2a00:edc0:6259:7:8::4 preserves original case of queried names (www.GIThUB.COM).
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver08</td><td>Testing QNAME case insensitivity</td><td>INFO</td><td>Nameserver ns-1283.awsdns-32.org/205.251.197.3 preserves original case of queried names (www.GIThUB.COM).
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver08</td><td>Testing QNAME case insensitivity</td><td>INFO</td><td>Nameserver ns-1283.awsdns-32.org/2600:9000:5305:300::1 preserves original case of queried names (www.GIThUB.COM).
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver08</td><td>Testing QNAME case insensitivity</td><td>INFO</td><td>Nameserver ns-1707.awsdns-21.co.uk/205.251.198.171 preserves original case of queried names (www.GIThUB.COM).
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver08</td><td>Testing QNAME case insensitivity</td><td>INFO</td><td>Nameserver ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1 preserves original case of queried names (www.GIThUB.COM).
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver08</td><td>Testing QNAME case insensitivity</td><td>INFO</td><td>Nameserver ns-421.awsdns-52.com/205.251.193.165 preserves original case of queried names (www.GIThUB.COM).
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver08</td><td>Testing QNAME case insensitivity</td><td>INFO</td><td>Nameserver ns-421.awsdns-52.com/2600:9000:5301:a500::1 preserves original case of queried names (www.GIThUB.COM).
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver08</td><td>Testing QNAME case insensitivity</td><td>INFO</td><td>Nameserver ns-520.awsdns-01.net/205.251.194.8 preserves original case of queried names (www.GIThUB.COM).
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver08</td><td>Testing QNAME case insensitivity</td><td>INFO</td><td>Nameserver ns-520.awsdns-01.net/2600:9000:5302:800::1 preserves original case of queried names (www.GIThUB.COM).
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver09</td><td>Testing QNAME case sensitivity</td><td>INFO</td><td>When asked for SOA records on &quot;www.github.com&quot; with different cases,  all servers reply consistently.
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver15</td><td>Checking for revealed software version</td><td>NOTICE</td><td>The following name server(s) respond to software version query &quot;version.bind&quot; with string &quot;a0bd971e3&quot;. Returned from name servers: &quot;dns1.p08.nsone.net/198.51.44.8; dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; dns2.p08.nsone.net/198.51.45.8; dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns3.p08.nsone.net/198.51.44.72; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3; dns4.p08.nsone.net/198.51.45.72; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4&quot;
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver15</td><td>Checking for revealed software version</td><td>NOTICE</td><td>The following name server(s) respond to software version query &quot;version.server&quot; with string &quot;a0bd971e3&quot;. Returned from name servers: &quot;dns1.p08.nsone.net/198.51.44.8; dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; dns2.p08.nsone.net/198.51.45.8; dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns3.p08.nsone.net/198.51.44.72; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3; dns4.p08.nsone.net/198.51.45.72; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4&quot;
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver15</td><td>Checking for revealed software version</td><td>NOTICE</td><td>The following name server(s) do not respond or respond with SERVFAIL to software version query &quot;version.bind&quot;. Returned from name servers: &quot;ns-1283.awsdns-32.org/205.251.197.3; ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/205.251.193.165; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/205.251.194.8; ns-520.awsdns-01.net/2600:9000:5302:800::1&quot;
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver15</td><td>Checking for revealed software version</td><td>NOTICE</td><td>The following name server(s) do not respond or respond with SERVFAIL to software version query &quot;version.server&quot;. Returned from name servers: &quot;ns-1283.awsdns-32.org/205.251.197.3; ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/205.251.193.165; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/205.251.194.8; ns-520.awsdns-01.net/2600:9000:5302:800::1&quot;
+</td></tr>
+<tr><td>Nameserver</td><td>Nameserver15</td><td>Checking for revealed software version</td><td>INFO</td><td>The following name server(s) do not reveal the software version. Returned from name servers: &quot;ns-1283.awsdns-32.org/205.251.197.3; ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/205.251.193.165; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/205.251.194.8; ns-520.awsdns-01.net/2600:9000:5302:800::1&quot;
+</td></tr>
+<tr><td>Syntax</td><td>Syntax01</td><td>No illegal characters in the domain name</td><td>INFO</td><td>No illegal characters in the domain name (github.com).
+</td></tr>
+<tr><td>Syntax</td><td>Syntax02</td><td>No hyphen (&#39;-&#39;) at the start or end of the domain name</td><td>INFO</td><td>Neither end of any label in the domain name (github.com) has a hyphen.
+</td></tr>
+<tr><td>Syntax</td><td>Syntax03</td><td>There must be no double hyphen (&#39;--&#39;) in position 3 and 4 of the domain name</td><td>INFO</td><td>Domain name (github.com) has no label with a double hyphen (&#39;--&#39;) in position 3 and 4 (with a prefix which is not &#39;xn--&#39;).
+</td></tr>
+<tr><td>Syntax</td><td>Syntax04</td><td>The NS name must have a valid domain/hostname</td><td>INFO</td><td>Nameserver (dns1.p08.nsone.net) syntax is valid.
+</td></tr>
+<tr><td>Syntax</td><td>Syntax04</td><td>The NS name must have a valid domain/hostname</td><td>INFO</td><td>Nameserver (dns2.p08.nsone.net) syntax is valid.
+</td></tr>
+<tr><td>Syntax</td><td>Syntax04</td><td>The NS name must have a valid domain/hostname</td><td>INFO</td><td>Nameserver (dns3.p08.nsone.net) syntax is valid.
+</td></tr>
+<tr><td>Syntax</td><td>Syntax04</td><td>The NS name must have a valid domain/hostname</td><td>INFO</td><td>Nameserver (dns4.p08.nsone.net) syntax is valid.
+</td></tr>
+<tr><td>Syntax</td><td>Syntax04</td><td>The NS name must have a valid domain/hostname</td><td>INFO</td><td>Nameserver (ns-1283.awsdns-32.org) syntax is valid.
+</td></tr>
+<tr><td>Syntax</td><td>Syntax04</td><td>The NS name must have a valid domain/hostname</td><td>INFO</td><td>Nameserver (ns-1707.awsdns-21.co.uk) syntax is valid.
+</td></tr>
+<tr><td>Syntax</td><td>Syntax04</td><td>The NS name must have a valid domain/hostname</td><td>INFO</td><td>Nameserver (ns-421.awsdns-52.com) syntax is valid.
+</td></tr>
+<tr><td>Syntax</td><td>Syntax04</td><td>The NS name must have a valid domain/hostname</td><td>INFO</td><td>Nameserver (ns-520.awsdns-01.net) syntax is valid.
+</td></tr>
+<tr><td>Syntax</td><td>Syntax05</td><td>Misuse of &#39;@&#39; character in the SOA RNAME field</td><td>INFO</td><td>There is no misused &#39;@&#39; character in the SOA RNAME field (hostmaster.nsone.net.).
+</td></tr>
+<tr><td>Syntax</td><td>Syntax06</td><td>No illegal characters in the SOA RNAME field</td><td>NOTICE</td><td>The SOA RNAME mail domain (ns1-com.mail.protection.outlook.com.) cannot be resolved to a mail server with an IP address.
+</td></tr>
+<tr><td>Syntax</td><td>Syntax07</td><td>No illegal characters in the SOA MNAME field</td><td>INFO</td><td>SOA MNAME (dns1.p08.nsone.net) syntax is valid.
+</td></tr>
+<tr><td>Syntax</td><td>Syntax08</td><td>MX name must have a valid hostname</td><td>INFO</td><td>Domain name MX (alt1.aspmx.l.google.com) syntax is valid.
+</td></tr>
+<tr><td>Syntax</td><td>Syntax08</td><td>MX name must have a valid hostname</td><td>INFO</td><td>Domain name MX (alt2.aspmx.l.google.com) syntax is valid.
+</td></tr>
+<tr><td>Syntax</td><td>Syntax08</td><td>MX name must have a valid hostname</td><td>INFO</td><td>Domain name MX (alt3.aspmx.l.google.com) syntax is valid.
+</td></tr>
+<tr><td>Syntax</td><td>Syntax08</td><td>MX name must have a valid hostname</td><td>INFO</td><td>Domain name MX (alt4.aspmx.l.google.com) syntax is valid.
+</td></tr>
+<tr><td>Syntax</td><td>Syntax08</td><td>MX name must have a valid hostname</td><td>INFO</td><td>Domain name MX (aspmx.l.google.com) syntax is valid.
+</td></tr>
+<tr><td>Zone</td><td>Zone01</td><td>Fully qualified master nameserver in SOA</td><td>WARNING</td><td>SOA MNAME name server(s) &quot;ns-1707.awsdns-21.co.uk/205.251.198.171; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1&quot; do not have the highest SOA SERIAL (expected &quot;1&quot; but got &quot;1656468023; 1&quot;)
+</td></tr>
+<tr><td>Zone</td><td>Zone02</td><td>SOA &#39;refresh&#39; minimum value</td><td>INFO</td><td>SOA &#39;refresh&#39; value (43200) is at least equal to the minimum recommended value (14400).
+</td></tr>
+<tr><td>Zone</td><td>Zone03</td><td>SOA &#39;retry&#39; lower than &#39;refresh&#39;</td><td>INFO</td><td>SOA &#39;refresh&#39; value (43200) is higher than the SOA &#39;retry&#39; value (7200).
+</td></tr>
+<tr><td>Zone</td><td>Zone04</td><td>SOA &#39;retry&#39; at least 1 hour</td><td>INFO</td><td>SOA &#39;retry&#39; value (7200) is at least equal to the minimum recommended value (3600).
+</td></tr>
+<tr><td>Zone</td><td>Zone05</td><td>SOA &#39;expire&#39; minimum value</td><td>INFO</td><td>SOA &#39;expire&#39; value (1209600) is higher than the minimum recommended value (604800) and not lower than the &#39;refresh&#39; value (43200).
+</td></tr>
+<tr><td>Zone</td><td>Zone06</td><td>SOA &#39;minimum&#39; maximum value</td><td>INFO</td><td>SOA &#39;minimum&#39; value (3600) is between the recommended ones (300/86400).
+</td></tr>
+<tr><td>Zone</td><td>Zone07</td><td>SOA master is not an alias</td><td>INFO</td><td>SOA &#39;mname&#39; value (dns1.p08.nsone.net) refers to a NS which is not an alias (CNAME).
+</td></tr>
+<tr><td>Zone</td><td>Zone07</td><td>SOA master is not an alias</td><td>INFO</td><td>SOA &#39;mname&#39; value (dns1.p08.nsone.net) refers to a NS which is not an alias (CNAME).
+</td></tr>
+<tr><td>Zone</td><td>Zone08</td><td>MX is not an alias</td><td>INFO</td><td>MX record for the domain is not pointing to a CNAME.
+</td></tr>
+<tr><td>Zone</td><td>Zone08</td><td>MX is not an alias</td><td>INFO</td><td>MX record for the domain is not pointing to a CNAME.
+</td></tr>
+<tr><td>Zone</td><td>Zone08</td><td>MX is not an alias</td><td>INFO</td><td>MX record for the domain is not pointing to a CNAME.
+</td></tr>
+<tr><td>Zone</td><td>Zone08</td><td>MX is not an alias</td><td>INFO</td><td>MX record for the domain is not pointing to a CNAME.
+</td></tr>
+<tr><td>Zone</td><td>Zone08</td><td>MX is not an alias</td><td>INFO</td><td>MX record for the domain is not pointing to a CNAME.
+</td></tr>
+<tr><td>Zone</td><td>Zone09</td><td>MX record present</td><td>INFO</td><td>Mail targets in the MX RRset &quot;aspmx.l.google.com.; alt1.aspmx.l.google.com.; alt2.aspmx.l.google.com.; alt3.aspmx.l.google.com.; alt4.aspmx.l.google.com.&quot; returned from name servers &quot;198.51.45.8; 2600:9000:5306:ab00::1; 2620:4d:4000:6259:7:8:0:3; 2600:9000:5302:800::1; 205.251.194.8; 2a00:edc0:6259:7:8::4; 2600:9000:5301:a500::1; 2620:4d:4000:6259:7:8:0:1; 205.251.193.165; 198.51.44.72; 205.251.198.171; 2600:9000:5305:300::1; 2a00:edc0:6259:7:8::2; 198.51.44.8; 205.251.197.3; 198.51.45.72&quot;.
+</td></tr>
+<tr><td>Zone</td><td>Zone10</td><td>No multiple SOA records</td><td>INFO</td><td>A unique SOA record is returned by all nameservers of the zone.
+</td></tr>
+<tr><td>Zone</td><td>Zone11</td><td>SPF policy validation</td><td>INFO</td><td>The SPF version 1 policy has correct syntax.
+</td></tr>
+</table>
+</body></html>

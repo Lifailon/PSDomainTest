@@ -1,0 +1,968 @@
+[{"Domain": "github.com"},{"Date": "15.05.2024 7:53:11"},{"Url": "https://zonemaster.net/en/result/02dfd6454bd83c89"},[
+  {
+    "Module": "System",
+    "Test": "Unspecified",
+    "Descriptions": "Unspecified",
+    "Level": "INFO",
+    "Result": "Using version v5.0.0 of the Zonemaster engine.\n"
+  },
+  {
+    "Module": "Basic",
+    "Test": "Basic01",
+    "Descriptions": "The domain must have a parent domain",
+    "Level": "INFO",
+    "Result": "The parent zone is \"com\" as returned from name servers \"a.gtld-servers.net/192.5.6.30; a.gtld-servers.net/2001:503:a83e::2:30; b.gtld-servers.net/192.33.14.30; b.gtld-servers.net/2001:503:231d::2:30; c.gtld-servers.net/192.26.92.30; c.gtld-servers.net/2001:503:83eb::30; d.gtld-servers.net/192.31.80.30; d.gtld-servers.net/2001:500:856e::30; e.gtld-servers.net/192.12.94.30; e.gtld-servers.net/2001:502:1ca1::30; f.gtld-servers.net/192.35.51.30; f.gtld-servers.net/2001:503:d414::30; g.gtld-servers.net/192.42.93.30; g.gtld-servers.net/2001:503:eea3::30; h.gtld-servers.net/192.54.112.30; h.gtld-servers.net/2001:502:8cc::30; i.gtld-servers.net/192.43.172.30; i.gtld-servers.net/2001:503:39c1::30; j.gtld-servers.net/192.48.79.30; j.gtld-servers.net/2001:502:7094::30; k.gtld-servers.net/192.52.178.30; k.gtld-servers.net/2001:503:d2d::30; l.gtld-servers.net/192.41.162.30; l.gtld-servers.net/2001:500:d937::30; m.gtld-servers.net/192.55.83.30; m.gtld-servers.net/2001:501:b1f9::30\".\n"
+  },
+  {
+    "Module": "Basic",
+    "Test": "Basic01",
+    "Descriptions": "The domain must have a parent domain",
+    "Level": "INFO",
+    "Result": "The zone \"github.com\" is found.\n"
+  },
+  {
+    "Module": "Basic",
+    "Test": "Basic02",
+    "Descriptions": "The domain must have at least one working name server",
+    "Level": "INFO",
+    "Result": "Authoritative answer on SOA query for \"github.com\" is returned by name servers \"dns1.p08.nsone.net/198.51.44.8; dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; dns2.p08.nsone.net/198.51.45.8; dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns3.p08.nsone.net/198.51.44.72; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3; dns4.p08.nsone.net/198.51.45.72; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4; ns-1283.awsdns-32.org/205.251.197.3; ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/205.251.193.165; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/205.251.194.8; ns-520.awsdns-01.net/2600:9000:5302:800::1\".\n"
+  },
+  {
+    "Module": "Basic",
+    "Test": "Unspecified",
+    "Descriptions": "Unspecified",
+    "Level": "INFO",
+    "Result": "Functional nameserver found. \"A\" query for www.github.com test skipped.\n"
+  },
+  {
+    "Module": "Address",
+    "Test": "Address01",
+    "Descriptions": "Name server address must be globally routable",
+    "Level": "INFO",
+    "Result": "All Nameserver addresses are in the routable public addressing space.\n"
+  },
+  {
+    "Module": "Address",
+    "Test": "Address02",
+    "Descriptions": "Reverse DNS entry exists for name server IP address",
+    "Level": "INFO",
+    "Result": "Reverse DNS entry exists for each Nameserver IP address.\n"
+  },
+  {
+    "Module": "Address",
+    "Test": "Address03",
+    "Descriptions": "Reverse DNS entry matches name server name",
+    "Level": "INFO",
+    "Result": "Every reverse DNS entry matches name server name.\n"
+  },
+  {
+    "Module": "Connectivity",
+    "Test": "Connectivity03",
+    "Descriptions": "AS Diversity",
+    "Level": "INFO",
+    "Result": "At least two IPv4 addresses of the authoritative nameservers are announced by different AS sets. A merged list of all AS: (16509, 62597).\n"
+  },
+  {
+    "Module": "Connectivity",
+    "Test": "Connectivity03",
+    "Descriptions": "AS Diversity",
+    "Level": "INFO",
+    "Result": "At least two IPv6 addresses of the authoritative nameservers are announced by different AS sets. A merged list of all AS: (16509, 62597).\n"
+  },
+  {
+    "Module": "Connectivity",
+    "Test": "Connectivity04",
+    "Descriptions": "IP Prefix Diversity",
+    "Level": "WARNING",
+    "Result": "The following name server(s) are announced in the same IPv4 prefix (198.51.45.0/24): \"dns2.p08.nsone.net/198.51.45.8; dns4.p08.nsone.net/198.51.45.72\"\n"
+  },
+  {
+    "Module": "Connectivity",
+    "Test": "Connectivity04",
+    "Descriptions": "IP Prefix Diversity",
+    "Level": "WARNING",
+    "Result": "The following name server(s) are announced in the same IPv4 prefix (198.51.44.0/24): \"dns1.p08.nsone.net/198.51.44.8; dns3.p08.nsone.net/198.51.44.72\"\n"
+  },
+  {
+    "Module": "Connectivity",
+    "Test": "Connectivity04",
+    "Descriptions": "IP Prefix Diversity",
+    "Level": "INFO",
+    "Result": "The following name server(s) are announced in unique IPv4 prefix(es): \"ns-1283.awsdns-32.org/205.251.197.3; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-421.awsdns-52.com/205.251.193.165; ns-520.awsdns-01.net/205.251.194.8\"\n"
+  },
+  {
+    "Module": "Connectivity",
+    "Test": "Connectivity04",
+    "Descriptions": "IP Prefix Diversity",
+    "Level": "WARNING",
+    "Result": "The following name server(s) are announced in the same IPv6 prefix (2620:4d:4000::/48): \"dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3\"\n"
+  },
+  {
+    "Module": "Connectivity",
+    "Test": "Connectivity04",
+    "Descriptions": "IP Prefix Diversity",
+    "Level": "WARNING",
+    "Result": "The following name server(s) are announced in the same IPv6 prefix (2a00:edc0:6259::/48): \"dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4\"\n"
+  },
+  {
+    "Module": "Connectivity",
+    "Test": "Connectivity04",
+    "Descriptions": "IP Prefix Diversity",
+    "Level": "INFO",
+    "Result": "The following name server(s) are announced in unique IPv6 prefix(es): \"ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/2600:9000:5302:800::1\"\n"
+  },
+  {
+    "Module": "Consistency",
+    "Test": "Consistency01",
+    "Descriptions": "SOA serial number consistency",
+    "Level": "INFO",
+    "Result": "Saw SOA serial number 1 on following nameserver set : ns-1283.awsdns-32.org/205.251.197.3; ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/205.251.193.165; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/205.251.194.8; ns-520.awsdns-01.net/2600:9000:5302:800::1.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver01",
+    "Descriptions": "A name server should not be a recursor",
+    "Level": "INFO",
+    "Result": "Nameserver dns2.p08.nsone.net/2a00:edc0:6259:7:8::2 is not a recursor.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver01",
+    "Descriptions": "A name server should not be a recursor",
+    "Level": "INFO",
+    "Result": "Nameserver dns3.p08.nsone.net/198.51.44.72 is not a recursor.\n"
+  },
+  {
+    "Module": "Consistency",
+    "Test": "Consistency01",
+    "Descriptions": "SOA serial number consistency",
+    "Level": "INFO",
+    "Result": "Saw SOA serial number 1656468023 on following nameserver set : dns1.p08.nsone.net/198.51.44.8; dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; dns2.p08.nsone.net/198.51.45.8; dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns3.p08.nsone.net/198.51.44.72; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3; dns4.p08.nsone.net/198.51.45.72; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4.\n"
+  },
+  {
+    "Module": "Consistency",
+    "Test": "Consistency01",
+    "Descriptions": "SOA serial number consistency",
+    "Level": "WARNING",
+    "Result": "Found 2 SOA serial number(s).\n"
+  },
+  {
+    "Module": "Consistency",
+    "Test": "Consistency01",
+    "Descriptions": "SOA serial number consistency",
+    "Level": "NOTICE",
+    "Result": "Difference between the smaller serial (1) and the bigger one (1656468023) is greater than the maximum allowed (0).\n"
+  },
+  {
+    "Module": "Consistency",
+    "Test": "Consistency02",
+    "Descriptions": "SOA RNAME consistency",
+    "Level": "NOTICE",
+    "Result": "Found 2 SOA rname(s).\n"
+  },
+  {
+    "Module": "Consistency",
+    "Test": "Consistency02",
+    "Descriptions": "SOA RNAME consistency",
+    "Level": "INFO",
+    "Result": "Found SOA rname awsdns-hostmaster.amazon.com. on following nameserver set : ns-1283.awsdns-32.org/205.251.197.3; ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/205.251.193.165; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/205.251.194.8; ns-520.awsdns-01.net/2600:9000:5302:800::1.\n"
+  },
+  {
+    "Module": "Consistency",
+    "Test": "Consistency02",
+    "Descriptions": "SOA RNAME consistency",
+    "Level": "INFO",
+    "Result": "Found SOA rname hostmaster.nsone.net. on following nameserver set : dns1.p08.nsone.net/198.51.44.8; dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; dns2.p08.nsone.net/198.51.45.8; dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns3.p08.nsone.net/198.51.44.72; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3; dns4.p08.nsone.net/198.51.45.72; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4.\n"
+  },
+  {
+    "Module": "Consistency",
+    "Test": "Consistency03",
+    "Descriptions": "SOA timers consistency",
+    "Level": "NOTICE",
+    "Result": "Found 2 SOA time parameter set(s).\n"
+  },
+  {
+    "Module": "Consistency",
+    "Test": "Consistency03",
+    "Descriptions": "SOA timers consistency",
+    "Level": "INFO",
+    "Result": "Saw SOA time parameter set (REFRESH=43200,  RETRY=7200,  EXPIRE=1209600,  MINIMUM=3600) on following nameserver set : dns1.p08.nsone.net/198.51.44.8; dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; dns2.p08.nsone.net/198.51.45.8; dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns3.p08.nsone.net/198.51.44.72; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3; dns4.p08.nsone.net/198.51.45.72; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4.\n"
+  },
+  {
+    "Module": "Consistency",
+    "Test": "Consistency03",
+    "Descriptions": "SOA timers consistency",
+    "Level": "INFO",
+    "Result": "Saw SOA time parameter set (REFRESH=7200,  RETRY=900,  EXPIRE=1209600,  MINIMUM=86400) on following nameserver set : ns-1283.awsdns-32.org/205.251.197.3; ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/205.251.193.165; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/205.251.194.8; ns-520.awsdns-01.net/2600:9000:5302:800::1.\n"
+  },
+  {
+    "Module": "Consistency",
+    "Test": "Consistency04",
+    "Descriptions": "Name server NS consistency",
+    "Level": "INFO",
+    "Result": "A single NS set was found (dns1.p08.nsone.net.; dns2.p08.nsone.net.; dns3.p08.nsone.net.; dns4.p08.nsone.net.; ns-1283.awsdns-32.org.; ns-1707.awsdns-21.co.uk.; ns-421.awsdns-52.com.; ns-520.awsdns-01.net.).\n"
+  },
+  {
+    "Module": "Consistency",
+    "Test": "Consistency05",
+    "Descriptions": "Consistency between glue and authoritative data",
+    "Level": "INFO",
+    "Result": "Glue records are consistent between glue and authoritative data.\n"
+  },
+  {
+    "Module": "Consistency",
+    "Test": "Consistency06",
+    "Descriptions": "SOA MNAME consistency",
+    "Level": "NOTICE",
+    "Result": "Saw 2 SOA mname.\n"
+  },
+  {
+    "Module": "Delegation",
+    "Test": "Delegation01",
+    "Descriptions": "Minimum number of name servers",
+    "Level": "INFO",
+    "Result": "Delegation lists enough (8) nameservers. Lower limit set to 2. Name servers: dns1.p08.nsone.net; dns2.p08.nsone.net; dns3.p08.nsone.net; dns4.p08.nsone.net; ns-1283.awsdns-32.org; ns-1707.awsdns-21.co.uk; ns-421.awsdns-52.com; ns-520.awsdns-01.net\n"
+  },
+  {
+    "Module": "Delegation",
+    "Test": "Delegation01",
+    "Descriptions": "Minimum number of name servers",
+    "Level": "INFO",
+    "Result": "Child lists enough (8) nameservers. Lower limit set to 2. Name servers: dns1.p08.nsone.net; dns2.p08.nsone.net; dns3.p08.nsone.net; dns4.p08.nsone.net; ns-1283.awsdns-32.org; ns-1707.awsdns-21.co.uk; ns-421.awsdns-52.com; ns-520.awsdns-01.net\n"
+  },
+  {
+    "Module": "Delegation",
+    "Test": "Delegation01",
+    "Descriptions": "Minimum number of name servers",
+    "Level": "INFO",
+    "Result": "Child lists enough (8) nameservers that resolve to IPv4 addresses. Lower limit set to 2. Name servers: dns1.p08.nsone.net/198.51.44.8; dns2.p08.nsone.net/198.51.45.8; dns3.p08.nsone.net/198.51.44.72; dns4.p08.nsone.net/198.51.45.72; ns-1283.awsdns-32.org/205.251.197.3; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-421.awsdns-52.com/205.251.193.165; ns-520.awsdns-01.net/205.251.194.8\n"
+  },
+  {
+    "Module": "Delegation",
+    "Test": "Delegation01",
+    "Descriptions": "Minimum number of name servers",
+    "Level": "INFO",
+    "Result": "Child lists enough (8) nameservers that resolve to IPv6 addresses. Lower limit set to 2. Name servers: dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4; ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/2600:9000:5302:800::1\n"
+  },
+  {
+    "Module": "Delegation",
+    "Test": "Delegation01",
+    "Descriptions": "Minimum number of name servers",
+    "Level": "INFO",
+    "Result": "Delegation lists enough (8) nameservers that resolve to IPv4 addresses. Lower limit set to 2. Name servers: dns1.p08.nsone.net/198.51.44.8; dns2.p08.nsone.net/198.51.45.8; dns3.p08.nsone.net/198.51.44.72; dns4.p08.nsone.net/198.51.45.72; ns-1283.awsdns-32.org/205.251.197.3; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-421.awsdns-52.com/205.251.193.165; ns-520.awsdns-01.net/205.251.194.8\n"
+  },
+  {
+    "Module": "Delegation",
+    "Test": "Delegation01",
+    "Descriptions": "Minimum number of name servers",
+    "Level": "INFO",
+    "Result": "Delegation lists enough (8) nameservers that resolve to IPv6 addresses. Lower limit set to 2. Name servers: dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4; ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/2600:9000:5302:800::1\n"
+  },
+  {
+    "Module": "Delegation",
+    "Test": "Delegation02",
+    "Descriptions": "Name servers must have distinct IP addresses",
+    "Level": "INFO",
+    "Result": "All the IP addresses used by the nameservers in parent are unique.\n"
+  },
+  {
+    "Module": "Delegation",
+    "Test": "Delegation02",
+    "Descriptions": "Name servers must have distinct IP addresses",
+    "Level": "INFO",
+    "Result": "All the IP addresses used by the nameservers in child are unique.\n"
+  },
+  {
+    "Module": "Delegation",
+    "Test": "Delegation02",
+    "Descriptions": "Name servers must have distinct IP addresses",
+    "Level": "INFO",
+    "Result": "All the IP addresses used by the nameservers are unique.\n"
+  },
+  {
+    "Module": "Delegation",
+    "Test": "Delegation03",
+    "Descriptions": "No truncation of referrals",
+    "Level": "INFO",
+    "Result": "The smallest possible legal referral packet is smaller than 513 octets (it is 494).\n"
+  },
+  {
+    "Module": "Delegation",
+    "Test": "Delegation04",
+    "Descriptions": "Name server is authoritative",
+    "Level": "INFO",
+    "Result": "All these nameservers are confirmed to be authoritative : dns1.p08.nsone.net; dns2.p08.nsone.net; dns3.p08.nsone.net; dns4.p08.nsone.net; ns-1283.awsdns-32.org; ns-1707.awsdns-21.co.uk; ns-421.awsdns-52.com; ns-520.awsdns-01.net.\n"
+  },
+  {
+    "Module": "Delegation",
+    "Test": "Delegation05",
+    "Descriptions": "Name server must not point at CNAME alias",
+    "Level": "INFO",
+    "Result": "No nameserver points to CNAME alias.\n"
+  },
+  {
+    "Module": "Delegation",
+    "Test": "Delegation06",
+    "Descriptions": "Existence of SOA",
+    "Level": "INFO",
+    "Result": "All the nameservers have SOA record.\n"
+  },
+  {
+    "Module": "Delegation",
+    "Test": "Delegation07",
+    "Descriptions": "Parent glue name records present in child",
+    "Level": "INFO",
+    "Result": "All of the nameserver names are listed both at parent and child.\n"
+  },
+  {
+    "Module": "DNSSEC",
+    "Test": "DNSSEC07",
+    "Descriptions": "If DNSKEY at child, parent should have DS",
+    "Level": "NOTICE",
+    "Result": "There are neither DS nor DNSKEY records for the zone.\n"
+  },
+  {
+    "Module": "DNSSEC",
+    "Test": "Unspecified",
+    "Descriptions": "Unspecified",
+    "Level": "NOTICE",
+    "Result": "The zone is not signed with DNSSEC.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver01",
+    "Descriptions": "A name server should not be a recursor",
+    "Level": "INFO",
+    "Result": "Nameserver dns1.p08.nsone.net/198.51.44.8 is not a recursor.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver01",
+    "Descriptions": "A name server should not be a recursor",
+    "Level": "INFO",
+    "Result": "Nameserver dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1 is not a recursor.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver01",
+    "Descriptions": "A name server should not be a recursor",
+    "Level": "INFO",
+    "Result": "Nameserver dns2.p08.nsone.net/198.51.45.8 is not a recursor.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver01",
+    "Descriptions": "A name server should not be a recursor",
+    "Level": "INFO",
+    "Result": "Nameserver dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3 is not a recursor.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver01",
+    "Descriptions": "A name server should not be a recursor",
+    "Level": "INFO",
+    "Result": "Nameserver dns4.p08.nsone.net/198.51.45.72 is not a recursor.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver01",
+    "Descriptions": "A name server should not be a recursor",
+    "Level": "INFO",
+    "Result": "Nameserver dns4.p08.nsone.net/2a00:edc0:6259:7:8::4 is not a recursor.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver01",
+    "Descriptions": "A name server should not be a recursor",
+    "Level": "INFO",
+    "Result": "Nameserver ns-1283.awsdns-32.org/205.251.197.3 is not a recursor.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver01",
+    "Descriptions": "A name server should not be a recursor",
+    "Level": "INFO",
+    "Result": "Nameserver ns-1283.awsdns-32.org/2600:9000:5305:300::1 is not a recursor.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver01",
+    "Descriptions": "A name server should not be a recursor",
+    "Level": "INFO",
+    "Result": "Nameserver ns-1707.awsdns-21.co.uk/205.251.198.171 is not a recursor.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver01",
+    "Descriptions": "A name server should not be a recursor",
+    "Level": "INFO",
+    "Result": "Nameserver ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1 is not a recursor.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver01",
+    "Descriptions": "A name server should not be a recursor",
+    "Level": "INFO",
+    "Result": "Nameserver ns-421.awsdns-52.com/205.251.193.165 is not a recursor.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver01",
+    "Descriptions": "A name server should not be a recursor",
+    "Level": "INFO",
+    "Result": "Nameserver ns-421.awsdns-52.com/2600:9000:5301:a500::1 is not a recursor.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver01",
+    "Descriptions": "A name server should not be a recursor",
+    "Level": "INFO",
+    "Result": "Nameserver ns-520.awsdns-01.net/205.251.194.8 is not a recursor.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver01",
+    "Descriptions": "A name server should not be a recursor",
+    "Level": "INFO",
+    "Result": "Nameserver ns-520.awsdns-01.net/2600:9000:5302:800::1 is not a recursor.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver02",
+    "Descriptions": "Test of EDNS0 support",
+    "Level": "INFO",
+    "Result": "The following nameservers support EDNS0 : ns-520.awsdns-01.net/2600:9000:5302:800::1; dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; ns-520.awsdns-01.net/205.251.194.8; ns-421.awsdns-52.com/205.251.193.165; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; dns3.p08.nsone.net/198.51.44.72; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-1283.awsdns-32.org/2600:9000:5305:300::1; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4; ns-1707.awsdns-21.co.uk/205.251.198.171; dns4.p08.nsone.net/198.51.45.72; dns2.p08.nsone.net/198.51.45.8; ns-1283.awsdns-32.org/205.251.197.3; dns1.p08.nsone.net/198.51.44.8; dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver03",
+    "Descriptions": "Test availability of zone transfer (AXFR)",
+    "Level": "INFO",
+    "Result": "AXFR not available on nameserver dns1.p08.nsone.net/198.51.44.8.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver03",
+    "Descriptions": "Test availability of zone transfer (AXFR)",
+    "Level": "INFO",
+    "Result": "AXFR not available on nameserver dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver03",
+    "Descriptions": "Test availability of zone transfer (AXFR)",
+    "Level": "INFO",
+    "Result": "AXFR not available on nameserver dns2.p08.nsone.net/198.51.45.8.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver03",
+    "Descriptions": "Test availability of zone transfer (AXFR)",
+    "Level": "INFO",
+    "Result": "AXFR not available on nameserver dns2.p08.nsone.net/2a00:edc0:6259:7:8::2.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver03",
+    "Descriptions": "Test availability of zone transfer (AXFR)",
+    "Level": "INFO",
+    "Result": "AXFR not available on nameserver dns3.p08.nsone.net/198.51.44.72.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver03",
+    "Descriptions": "Test availability of zone transfer (AXFR)",
+    "Level": "INFO",
+    "Result": "AXFR not available on nameserver dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver03",
+    "Descriptions": "Test availability of zone transfer (AXFR)",
+    "Level": "INFO",
+    "Result": "AXFR not available on nameserver dns4.p08.nsone.net/198.51.45.72.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver03",
+    "Descriptions": "Test availability of zone transfer (AXFR)",
+    "Level": "INFO",
+    "Result": "AXFR not available on nameserver dns4.p08.nsone.net/2a00:edc0:6259:7:8::4.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver03",
+    "Descriptions": "Test availability of zone transfer (AXFR)",
+    "Level": "INFO",
+    "Result": "AXFR not available on nameserver ns-1283.awsdns-32.org/205.251.197.3.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver03",
+    "Descriptions": "Test availability of zone transfer (AXFR)",
+    "Level": "INFO",
+    "Result": "AXFR not available on nameserver ns-1283.awsdns-32.org/2600:9000:5305:300::1.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver03",
+    "Descriptions": "Test availability of zone transfer (AXFR)",
+    "Level": "INFO",
+    "Result": "AXFR not available on nameserver ns-1707.awsdns-21.co.uk/205.251.198.171.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver03",
+    "Descriptions": "Test availability of zone transfer (AXFR)",
+    "Level": "INFO",
+    "Result": "AXFR not available on nameserver ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver03",
+    "Descriptions": "Test availability of zone transfer (AXFR)",
+    "Level": "INFO",
+    "Result": "AXFR not available on nameserver ns-421.awsdns-52.com/205.251.193.165.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver03",
+    "Descriptions": "Test availability of zone transfer (AXFR)",
+    "Level": "INFO",
+    "Result": "AXFR not available on nameserver ns-421.awsdns-52.com/2600:9000:5301:a500::1.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver03",
+    "Descriptions": "Test availability of zone transfer (AXFR)",
+    "Level": "INFO",
+    "Result": "AXFR not available on nameserver ns-520.awsdns-01.net/205.251.194.8.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver03",
+    "Descriptions": "Test availability of zone transfer (AXFR)",
+    "Level": "INFO",
+    "Result": "AXFR not available on nameserver ns-520.awsdns-01.net/2600:9000:5302:800::1.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver04",
+    "Descriptions": "Same source address",
+    "Level": "INFO",
+    "Result": "All nameservers reply with same IP used to query them.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver06",
+    "Descriptions": "NS can be resolved",
+    "Level": "INFO",
+    "Result": "All nameservers succeeded to resolve to an IP address.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver07",
+    "Descriptions": "To check whether authoritative name servers return an upward referral",
+    "Level": "INFO",
+    "Result": "None of the following nameservers returns an upward referral : dns1.p08.nsone.net; dns2.p08.nsone.net; dns3.p08.nsone.net; dns4.p08.nsone.net; ns-1283.awsdns-32.org; ns-1707.awsdns-21.co.uk; ns-421.awsdns-52.com; ns-520.awsdns-01.net.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver08",
+    "Descriptions": "Testing QNAME case insensitivity",
+    "Level": "INFO",
+    "Result": "Nameserver dns1.p08.nsone.net/198.51.44.8 preserves original case of queried names (www.GIThUB.COM).\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver08",
+    "Descriptions": "Testing QNAME case insensitivity",
+    "Level": "INFO",
+    "Result": "Nameserver dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1 preserves original case of queried names (www.GIThUB.COM).\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver08",
+    "Descriptions": "Testing QNAME case insensitivity",
+    "Level": "INFO",
+    "Result": "Nameserver dns2.p08.nsone.net/198.51.45.8 preserves original case of queried names (www.GIThUB.COM).\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver08",
+    "Descriptions": "Testing QNAME case insensitivity",
+    "Level": "INFO",
+    "Result": "Nameserver dns2.p08.nsone.net/2a00:edc0:6259:7:8::2 preserves original case of queried names (www.GIThUB.COM).\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver08",
+    "Descriptions": "Testing QNAME case insensitivity",
+    "Level": "INFO",
+    "Result": "Nameserver dns3.p08.nsone.net/198.51.44.72 preserves original case of queried names (www.GIThUB.COM).\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver08",
+    "Descriptions": "Testing QNAME case insensitivity",
+    "Level": "INFO",
+    "Result": "Nameserver dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3 preserves original case of queried names (www.GIThUB.COM).\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver08",
+    "Descriptions": "Testing QNAME case insensitivity",
+    "Level": "INFO",
+    "Result": "Nameserver dns4.p08.nsone.net/198.51.45.72 preserves original case of queried names (www.GIThUB.COM).\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver08",
+    "Descriptions": "Testing QNAME case insensitivity",
+    "Level": "INFO",
+    "Result": "Nameserver dns4.p08.nsone.net/2a00:edc0:6259:7:8::4 preserves original case of queried names (www.GIThUB.COM).\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver08",
+    "Descriptions": "Testing QNAME case insensitivity",
+    "Level": "INFO",
+    "Result": "Nameserver ns-1283.awsdns-32.org/205.251.197.3 preserves original case of queried names (www.GIThUB.COM).\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver08",
+    "Descriptions": "Testing QNAME case insensitivity",
+    "Level": "INFO",
+    "Result": "Nameserver ns-1283.awsdns-32.org/2600:9000:5305:300::1 preserves original case of queried names (www.GIThUB.COM).\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver08",
+    "Descriptions": "Testing QNAME case insensitivity",
+    "Level": "INFO",
+    "Result": "Nameserver ns-1707.awsdns-21.co.uk/205.251.198.171 preserves original case of queried names (www.GIThUB.COM).\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver08",
+    "Descriptions": "Testing QNAME case insensitivity",
+    "Level": "INFO",
+    "Result": "Nameserver ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1 preserves original case of queried names (www.GIThUB.COM).\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver08",
+    "Descriptions": "Testing QNAME case insensitivity",
+    "Level": "INFO",
+    "Result": "Nameserver ns-421.awsdns-52.com/205.251.193.165 preserves original case of queried names (www.GIThUB.COM).\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver08",
+    "Descriptions": "Testing QNAME case insensitivity",
+    "Level": "INFO",
+    "Result": "Nameserver ns-421.awsdns-52.com/2600:9000:5301:a500::1 preserves original case of queried names (www.GIThUB.COM).\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver08",
+    "Descriptions": "Testing QNAME case insensitivity",
+    "Level": "INFO",
+    "Result": "Nameserver ns-520.awsdns-01.net/205.251.194.8 preserves original case of queried names (www.GIThUB.COM).\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver08",
+    "Descriptions": "Testing QNAME case insensitivity",
+    "Level": "INFO",
+    "Result": "Nameserver ns-520.awsdns-01.net/2600:9000:5302:800::1 preserves original case of queried names (www.GIThUB.COM).\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver09",
+    "Descriptions": "Testing QNAME case sensitivity",
+    "Level": "INFO",
+    "Result": "When asked for SOA records on \"www.github.com\" with different cases,  all servers reply consistently.\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver15",
+    "Descriptions": "Checking for revealed software version",
+    "Level": "NOTICE",
+    "Result": "The following name server(s) respond to software version query \"version.bind\" with string \"a0bd971e3\". Returned from name servers: \"dns1.p08.nsone.net/198.51.44.8; dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; dns2.p08.nsone.net/198.51.45.8; dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns3.p08.nsone.net/198.51.44.72; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3; dns4.p08.nsone.net/198.51.45.72; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4\"\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver15",
+    "Descriptions": "Checking for revealed software version",
+    "Level": "NOTICE",
+    "Result": "The following name server(s) respond to software version query \"version.server\" with string \"a0bd971e3\". Returned from name servers: \"dns1.p08.nsone.net/198.51.44.8; dns1.p08.nsone.net/2620:4d:4000:6259:7:8:0:1; dns2.p08.nsone.net/198.51.45.8; dns2.p08.nsone.net/2a00:edc0:6259:7:8::2; dns3.p08.nsone.net/198.51.44.72; dns3.p08.nsone.net/2620:4d:4000:6259:7:8:0:3; dns4.p08.nsone.net/198.51.45.72; dns4.p08.nsone.net/2a00:edc0:6259:7:8::4\"\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver15",
+    "Descriptions": "Checking for revealed software version",
+    "Level": "NOTICE",
+    "Result": "The following name server(s) do not respond or respond with SERVFAIL to software version query \"version.bind\". Returned from name servers: \"ns-1283.awsdns-32.org/205.251.197.3; ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/205.251.193.165; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/205.251.194.8; ns-520.awsdns-01.net/2600:9000:5302:800::1\"\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver15",
+    "Descriptions": "Checking for revealed software version",
+    "Level": "NOTICE",
+    "Result": "The following name server(s) do not respond or respond with SERVFAIL to software version query \"version.server\". Returned from name servers: \"ns-1283.awsdns-32.org/205.251.197.3; ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/205.251.193.165; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/205.251.194.8; ns-520.awsdns-01.net/2600:9000:5302:800::1\"\n"
+  },
+  {
+    "Module": "Nameserver",
+    "Test": "Nameserver15",
+    "Descriptions": "Checking for revealed software version",
+    "Level": "INFO",
+    "Result": "The following name server(s) do not reveal the software version. Returned from name servers: \"ns-1283.awsdns-32.org/205.251.197.3; ns-1283.awsdns-32.org/2600:9000:5305:300::1; ns-1707.awsdns-21.co.uk/205.251.198.171; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1; ns-421.awsdns-52.com/205.251.193.165; ns-421.awsdns-52.com/2600:9000:5301:a500::1; ns-520.awsdns-01.net/205.251.194.8; ns-520.awsdns-01.net/2600:9000:5302:800::1\"\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax01",
+    "Descriptions": "No illegal characters in the domain name",
+    "Level": "INFO",
+    "Result": "No illegal characters in the domain name (github.com).\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax02",
+    "Descriptions": "No hyphen ('-') at the start or end of the domain name",
+    "Level": "INFO",
+    "Result": "Neither end of any label in the domain name (github.com) has a hyphen.\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax03",
+    "Descriptions": "There must be no double hyphen ('--') in position 3 and 4 of the domain name",
+    "Level": "INFO",
+    "Result": "Domain name (github.com) has no label with a double hyphen ('--') in position 3 and 4 (with a prefix which is not 'xn--').\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax04",
+    "Descriptions": "The NS name must have a valid domain/hostname",
+    "Level": "INFO",
+    "Result": "Nameserver (dns1.p08.nsone.net) syntax is valid.\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax04",
+    "Descriptions": "The NS name must have a valid domain/hostname",
+    "Level": "INFO",
+    "Result": "Nameserver (dns2.p08.nsone.net) syntax is valid.\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax04",
+    "Descriptions": "The NS name must have a valid domain/hostname",
+    "Level": "INFO",
+    "Result": "Nameserver (dns3.p08.nsone.net) syntax is valid.\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax04",
+    "Descriptions": "The NS name must have a valid domain/hostname",
+    "Level": "INFO",
+    "Result": "Nameserver (dns4.p08.nsone.net) syntax is valid.\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax04",
+    "Descriptions": "The NS name must have a valid domain/hostname",
+    "Level": "INFO",
+    "Result": "Nameserver (ns-1283.awsdns-32.org) syntax is valid.\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax04",
+    "Descriptions": "The NS name must have a valid domain/hostname",
+    "Level": "INFO",
+    "Result": "Nameserver (ns-1707.awsdns-21.co.uk) syntax is valid.\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax04",
+    "Descriptions": "The NS name must have a valid domain/hostname",
+    "Level": "INFO",
+    "Result": "Nameserver (ns-421.awsdns-52.com) syntax is valid.\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax04",
+    "Descriptions": "The NS name must have a valid domain/hostname",
+    "Level": "INFO",
+    "Result": "Nameserver (ns-520.awsdns-01.net) syntax is valid.\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax05",
+    "Descriptions": "Misuse of '@' character in the SOA RNAME field",
+    "Level": "INFO",
+    "Result": "There is no misused '@' character in the SOA RNAME field (hostmaster.nsone.net.).\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax06",
+    "Descriptions": "No illegal characters in the SOA RNAME field",
+    "Level": "NOTICE",
+    "Result": "The SOA RNAME mail domain (ns1-com.mail.protection.outlook.com.) cannot be resolved to a mail server with an IP address.\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax07",
+    "Descriptions": "No illegal characters in the SOA MNAME field",
+    "Level": "INFO",
+    "Result": "SOA MNAME (dns1.p08.nsone.net) syntax is valid.\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax08",
+    "Descriptions": "MX name must have a valid hostname",
+    "Level": "INFO",
+    "Result": "Domain name MX (alt1.aspmx.l.google.com) syntax is valid.\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax08",
+    "Descriptions": "MX name must have a valid hostname",
+    "Level": "INFO",
+    "Result": "Domain name MX (alt2.aspmx.l.google.com) syntax is valid.\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax08",
+    "Descriptions": "MX name must have a valid hostname",
+    "Level": "INFO",
+    "Result": "Domain name MX (alt3.aspmx.l.google.com) syntax is valid.\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax08",
+    "Descriptions": "MX name must have a valid hostname",
+    "Level": "INFO",
+    "Result": "Domain name MX (alt4.aspmx.l.google.com) syntax is valid.\n"
+  },
+  {
+    "Module": "Syntax",
+    "Test": "Syntax08",
+    "Descriptions": "MX name must have a valid hostname",
+    "Level": "INFO",
+    "Result": "Domain name MX (aspmx.l.google.com) syntax is valid.\n"
+  },
+  {
+    "Module": "Zone",
+    "Test": "Zone01",
+    "Descriptions": "Fully qualified master nameserver in SOA",
+    "Level": "WARNING",
+    "Result": "SOA MNAME name server(s) \"ns-1707.awsdns-21.co.uk/205.251.198.171; ns-1707.awsdns-21.co.uk/2600:9000:5306:ab00::1\" do not have the highest SOA SERIAL (expected \"1\" but got \"1656468023; 1\")\n"
+  },
+  {
+    "Module": "Zone",
+    "Test": "Zone02",
+    "Descriptions": "SOA 'refresh' minimum value",
+    "Level": "INFO",
+    "Result": "SOA 'refresh' value (43200) is at least equal to the minimum recommended value (14400).\n"
+  },
+  {
+    "Module": "Zone",
+    "Test": "Zone03",
+    "Descriptions": "SOA 'retry' lower than 'refresh'",
+    "Level": "INFO",
+    "Result": "SOA 'refresh' value (43200) is higher than the SOA 'retry' value (7200).\n"
+  },
+  {
+    "Module": "Zone",
+    "Test": "Zone04",
+    "Descriptions": "SOA 'retry' at least 1 hour",
+    "Level": "INFO",
+    "Result": "SOA 'retry' value (7200) is at least equal to the minimum recommended value (3600).\n"
+  },
+  {
+    "Module": "Zone",
+    "Test": "Zone05",
+    "Descriptions": "SOA 'expire' minimum value",
+    "Level": "INFO",
+    "Result": "SOA 'expire' value (1209600) is higher than the minimum recommended value (604800) and not lower than the 'refresh' value (43200).\n"
+  },
+  {
+    "Module": "Zone",
+    "Test": "Zone06",
+    "Descriptions": "SOA 'minimum' maximum value",
+    "Level": "INFO",
+    "Result": "SOA 'minimum' value (3600) is between the recommended ones (300/86400).\n"
+  },
+  {
+    "Module": "Zone",
+    "Test": "Zone07",
+    "Descriptions": "SOA master is not an alias",
+    "Level": "INFO",
+    "Result": "SOA 'mname' value (dns1.p08.nsone.net) refers to a NS which is not an alias (CNAME).\n"
+  },
+  {
+    "Module": "Zone",
+    "Test": "Zone07",
+    "Descriptions": "SOA master is not an alias",
+    "Level": "INFO",
+    "Result": "SOA 'mname' value (dns1.p08.nsone.net) refers to a NS which is not an alias (CNAME).\n"
+  },
+  {
+    "Module": "Zone",
+    "Test": "Zone08",
+    "Descriptions": "MX is not an alias",
+    "Level": "INFO",
+    "Result": "MX record for the domain is not pointing to a CNAME.\n"
+  },
+  {
+    "Module": "Zone",
+    "Test": "Zone08",
+    "Descriptions": "MX is not an alias",
+    "Level": "INFO",
+    "Result": "MX record for the domain is not pointing to a CNAME.\n"
+  },
+  {
+    "Module": "Zone",
+    "Test": "Zone08",
+    "Descriptions": "MX is not an alias",
+    "Level": "INFO",
+    "Result": "MX record for the domain is not pointing to a CNAME.\n"
+  },
+  {
+    "Module": "Zone",
+    "Test": "Zone08",
+    "Descriptions": "MX is not an alias",
+    "Level": "INFO",
+    "Result": "MX record for the domain is not pointing to a CNAME.\n"
+  },
+  {
+    "Module": "Zone",
+    "Test": "Zone08",
+    "Descriptions": "MX is not an alias",
+    "Level": "INFO",
+    "Result": "MX record for the domain is not pointing to a CNAME.\n"
+  },
+  {
+    "Module": "Zone",
+    "Test": "Zone09",
+    "Descriptions": "MX record present",
+    "Level": "INFO",
+    "Result": "Mail targets in the MX RRset \"aspmx.l.google.com.; alt1.aspmx.l.google.com.; alt2.aspmx.l.google.com.; alt3.aspmx.l.google.com.; alt4.aspmx.l.google.com.\" returned from name servers \"198.51.45.8; 2600:9000:5306:ab00::1; 2620:4d:4000:6259:7:8:0:3; 2600:9000:5302:800::1; 205.251.194.8; 2a00:edc0:6259:7:8::4; 2600:9000:5301:a500::1; 2620:4d:4000:6259:7:8:0:1; 205.251.193.165; 198.51.44.72; 205.251.198.171; 2600:9000:5305:300::1; 2a00:edc0:6259:7:8::2; 198.51.44.8; 205.251.197.3; 198.51.45.72\".\n"
+  },
+  {
+    "Module": "Zone",
+    "Test": "Zone10",
+    "Descriptions": "No multiple SOA records",
+    "Level": "INFO",
+    "Result": "A unique SOA record is returned by all nameservers of the zone.\n"
+  },
+  {
+    "Module": "Zone",
+    "Test": "Zone11",
+    "Descriptions": "SPF policy validation",
+    "Level": "INFO",
+    "Result": "The SPF version 1 policy has correct syntax.\n"
+  }
+]]
