@@ -2,9 +2,9 @@
 
 PowerShell module to test DNS records of any domain using [ZoneMaster](https://github.com/zonemaster/zonemaster) api. 
 
-By default, you water down the result in the format of a PowerShell object whose metrics can be passed to a monitoring system (such as Zabbix or InfluxDB and Grafana 📊). The module also allows you to get the result in `json` format and `html` report.
+By default, get down the result in the format of a PowerShell object whose metrics can be passed to a monitoring system (such as Zabbix or InfluxDB and Grafana 📊). The module also allows you to get the result in `json` format and `html` report.
 
-> 💡 Testing some domains may take several minutes. If a test request to the same domain is repeated within the next 10-15 minutes, the result of the previous (last) test will be returned.
+💡 Testing some domains may take several minutes (for example, checking the `github.com` domain takes about 5 minutes on average). If a test request to the same domain is repeated within the next 10-15 minutes, the result of the previous (last) test will be returned.
 
 ## 🚀 Install
 
@@ -19,7 +19,7 @@ By default, you water down the result in the format of a PowerShell object whose
 
 ### Examples:
 
-- Output in the default **PowerShell object format**:
+- Output in **PowerShell object format** (default):
 
 `Get-DomainTest -Domain github.com -Warning`
 
@@ -172,8 +172,6 @@ Zone         Zone01         Fully qualified master nameserver in SOA     WARNING
   }
 ]]
 ```
-
-> 💡 It takes about 5 minutes to validate a `github.com` domain.
 
 ## 📢 Report
 
