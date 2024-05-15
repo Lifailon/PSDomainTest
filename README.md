@@ -1,5 +1,11 @@
 # PSDomainTest
 
+<p align="center">
+<a href="https://github.com/Lifailon/PSDomainTest"><img title="GitHub"src="https://img.shields.io/github/v/release/Lifailon/PSDomainTest?logo=GitHub&label=GitHub"></a>
+<a href="https://www.nuget.org/packages/PSDomainTest"><img title="NuGet"src="https://img.shields.io/nuget/vpre/PSDomainTest?logo=nuget&label=NuGet"></a>
+<a href="https://github.com/Lifailon/PSDomainTest/blob/rsa/LICENSE"><img title="License"src="https://img.shields.io/github/license/Lifailon/PSDomainTest?link=https%3A%2F%2Fgithub.com%2FLifailon%2FPSDomainTest%2Fblob%2Frsa%2FLICENSE"></a>
+</p>
+
 PowerShell module to test DNS records of any domain using [ZoneMaster](https://github.com/zonemaster/zonemaster) api. 
 
 By default, get down the result in the format of a PowerShell object whose metrics can be passed to a monitoring system (such as Zabbix or InfluxDB and Grafana 📊). The module also allows you to get the result in `json` format and `html` report.
@@ -7,6 +13,18 @@ By default, get down the result in the format of a PowerShell object whose metri
 💡 It may take a few minutes to get the final results of all tests (most often it takes 30 to 60 seconds, for example, checking the `github.com` domain takes about 5 minutes on average). If a request to test the same domain is repeated within the next 10-15 minutes, the result of the previous (last) test will be returned.
 
 ## 🚀 Install
+
+You must have a NuGet repository registered:
+
+```PowerShell
+Register-PSRepository -Name "NuGet" -SourceLocation "https://www.nuget.org/api/v2" -InstallationPolicy Trusted
+```
+
+Install the module from the [NuGet](https://www.nuget.org/packages/PSDomainTest) package manager:
+
+```PowerShell
+Install-Module PSDomainTest -Repository NuGet -Scope CurrentUser
+```
 
 ### Params:
 
