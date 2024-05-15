@@ -177,7 +177,7 @@ Zone         Zone01         Fully qualified master nameserver in SOA     WARNING
 
 ## 📢 Report
 
-Example HTML report for the domain `github.com`
+[Example HTML report](https://github.com/Lifailon/PSDomainTest/blob/rsa/test/github/result.html) for the domain `github.com` (the report provides the ability to sort by column).
 
 ```PowerShell
 Get-DomainTest -Domain github.com -html | Out-File .\result.html

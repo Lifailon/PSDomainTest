@@ -13,7 +13,7 @@ function Get-DomainTest {
     https://zonemaster.net/en/run-test
     #>
     param (
-        [string]$Domain,
+        [string][Parameter(Mandatory = $true)]$Domain,
         [switch]$Warning,
         [switch]$json,
         [switch]$html
